@@ -23,7 +23,7 @@ import java.util.*
 
 class ZPagerAdapter : PagerAdapter {
     private var mcontext: Context
-    private var mresids: List<Int>?=null
+    private var mresids: IntArray?=null
     private var murllist: List<String>? = null
     private val imageViewList = ArrayList<ImageView>()
     private val zDotViewList = ArrayList<ZDotView>()
@@ -35,9 +35,9 @@ class ZPagerAdapter : PagerAdapter {
     private var mycountdowntimer: MyCountDownTimer? = null
     internal var monbanneritemclick: ZBanner.OnBannerItemClick?=null
 
-    constructor(context: Context, resids: Array<Int>) {
+    constructor(context: Context, resids: IntArray) {
         this.mcontext = context
-        this.mresids = Arrays.asList(*resids)
+        this.mresids =resids
         mycountdowntimer = MyCountDownTimer(3000, 1000)
         initview()
 

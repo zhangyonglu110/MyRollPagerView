@@ -2,7 +2,9 @@ package com.zyl.rollpager.main
 
 import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import com.zyl.myview.rollpagerview.adapter.ZPagerAdapter
+import com.zyl.myview.rollpagerview.banner.ZBanner
 import com.zyl.myview.rollpagerview.banner.ZDotView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -19,5 +21,11 @@ class MainActivity : Activity() {
         zpagerAdapter!!.setdotSelectedColor(android.R.color.holo_red_light)
         zpagerAdapter!!.setisautoplay(true)
         zbanner.setadapter(zpagerAdapter!!)
+        zbanner.setbanneritemclick(object :ZBanner.OnBannerItemClick{
+            override fun OnItemClick(position: Int) {
+                Toast.makeText(this@MainActivity,position.toString(),Toast.LENGTH_SHORT).show()
+            }
+        }
+        )
     }
 }
