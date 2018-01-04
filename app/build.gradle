@@ -23,6 +23,6 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:26.0.0'
     testCompile 'junit:junit:4.12'
-    compile project(":zrollpagerview")
+    compile 'com.github.zhangyonglu110:MyRollPagerView:v1.0.0'
 
 }

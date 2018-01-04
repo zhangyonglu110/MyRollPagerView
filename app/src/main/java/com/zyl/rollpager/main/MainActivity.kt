@@ -17,6 +17,7 @@ class MainActivity : Activity() {
         zpagerAdapter=ZPagerAdapter(this,idlists!!)
         zpagerAdapter!!.setdoNormalColor(android.R.color.darker_gray)
         zpagerAdapter!!.setdotSelectedColor(android.R.color.holo_red_light)
+        zpagerAdapter!!.setisautoplay(true)
         zbanner.setadapter(zpagerAdapter!!)
     }
 }
